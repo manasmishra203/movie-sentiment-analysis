@@ -1,76 +1,54 @@
-# movie-sentiment-analysis
-This repository contains a beginner-friendly Movie Review Sentiment Analysis system built in Python.It includes a random dataset generator that creates positive and negative reviews each time the program runs.Also this project focuses on clean logic, readability, and foundational NLP concepts
-# Movie Review Sentiment Analysis
+# Student_expense_tracker
 
-A simple Python project that predicts whether a movie review is **positive** or **negative** using **word frequency counting**.  
-The project also includes a **random dataset generator**, which automatically creates positive and negative reviews every time the program runs.
+A simple, command-line utility for students (or anyone!) to track and manage their daily and monthly expenses. This tool allows users to quickly add expenses, view a list of all records, delete entries, and calculate the total spending for any given month.
 
-This project is designed for beginners and follows the requirements of the VITyarthi – Build Your Own Project guidelines.
+Features
 
----
+Add Expense: Record new expenses with details including date, amount, category, and description.
+View Expenses: Display a numbered list of all recorded expenses.
+Delete Expense: Remove a specific expense from the list using its number.
+Monthly Total: Calculate and display the cumulative spending for a specified month (e.g., YYYY-MM).
+Simple Interface: Easy-to-use menu-driven command line interface.
 
-## Features
+Getting Started
 
-- Automatic **random dataset generation**  
-- Counts word frequencies from positive and negative reviews  
-- Predicts sentiment based on word occurrence  
-- Handles user input with a clean loop  
-- Beginner-friendly implementation (no advanced ML libraries)  
-- Easy to extend and modify  
+Prerequisites
+You need Python 3 installed on your system.
 
----
+Installation
+No special installation is required!
+Save the Code: Save the provided code into a file named expense_tracker.py.
+Run the Program: Open your terminal or command prompt, navigate to the directory where you saved the file, and run:
 
-## Project Structure
-├── movie_review.py
-├── README.md
-└── statement.md
+python expense_tracker.py
 
----
+Usage
+Once the program is running, you'll see a menu:
 
-## How It Works (In Simple Words)
+===== Student Expense Tracker =====
+1. Add Expense 
+2. View All Expenses
+3. Delete Expense
+4. Monthly Total
+0. Exit
 
-1. The program creates random positive and negative movie reviews.  
-2. It counts how many times each word appears in positives vs negatives.  
-3. The user enters a review.  
-4. The system checks the words and compares frequencies.  
-5. Output = **positive**, **negative**, or **cannot decide**.
+Option	Command	Description
 
----
+1	Add Expense	Prompts for date (YYYY-MM-DD), amount, category, and description.
+2	View All Expenses	Lists all expenses with an index number.
+3	Delete Expense	Lists expenses, then asks for the index number of the item to remove.
+4	Monthly Total	Asks for the month in YYYY-MM format and calculates the sum of expenses for that period.
+0	Exit	Closes the program.
 
-## Technologies Used
+Limitations
 
-- Python  
-- `random` module  
-- Dictionaries & basic text processing  
+Data Volatility: This program stores all expenses in memory (expenses = []). When the program is closed (0. Exit), all data is lost.
+No File I/O: There is currently no functionality to save or load expenses to/from a file (like CSV or JSON).
 
----
+Contributing
 
-## How to Run the Project
+This is a basic starter project. If you'd like to extend it, here are some ideas:
+Implement data persistence (e.g., saving data to a file upon exit and loading it on startup).
+Add a reporting feature (e.g., total per category).
+Add input validation (e.g., ensuring the date format is correct or that the amount is a valid number).
 
-1. Run the Python Program
-*movie_review.py*
-
-2. Enter Reviews
-*Type any movie review*
-*Type exit to stop the program*
-
-## Example Usage
-
-Enter a movie review: the acting was amazing
-Prediction: positive
-Enter a movie review: the film felt boring
-Prediction: negative
-Enter a movie review: exit
-Goodbye!
-
-## Future Enhancements
-
-Add real datasets
-Add accuracy testing
-Add GUI using Tkinter
-Add Naive Bayes or ML model
-Add stopword removal
-Deploy as web application
-
-## License
-This project is open for academic use under the VITyarthi Build Your Own Project initiative.
